@@ -275,7 +275,7 @@ export default function PackdLanding() {
         {/* Email signup */}
         <div id="waitlist" style={{ marginTop: 36, animation: "fadeUp 0.6s ease 0.3s both", width: "100%", maxWidth: 420 }}>
           {!submitted ? (
-            <form onSubmit={handleSubmit} style={{ display: "flex", gap: 8 }}>
+            <form onSubmit={handleSubmit} style={{ display: "flex", gap: 8, flexWrap: "wrap"}}>
               <input
                 type="email" placeholder="Enter your email"
                 value={email} onChange={e => setEmail(e.target.value)}
@@ -420,7 +420,7 @@ export default function PackdLanding() {
           </p>
 
           {!barSubmitted ? (
-            <form onSubmit={handleBarSubmit} style={{ display: "flex", gap: 8, maxWidth: 420, margin: "0 auto" }}>
+            <form onSubmit={handleBarSubmit} style={{ display: "flex", gap: 8, maxWidth: 420, margin: "0 auto", flexDirection: "column" }}>
               <input
                 type="email" placeholder="Your email"
                 value={barEmail} onChange={e => setBarEmail(e.target.value)}
